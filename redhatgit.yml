@@ -1,0 +1,8 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name: git insall
+    yum: 
+     name: git
+     state: present
