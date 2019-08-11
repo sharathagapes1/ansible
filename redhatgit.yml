@@ -2,7 +2,7 @@
 - hosts: all
   become: yes
   tasks: 
-  - name: git insall
+  - name: git install
     yum: 
      name: git
      state: present
