@@ -1,0 +1,16 @@
+---
+- hosts: all
+  become: yes
+  tasks: 
+  - name : git wget tree installation
+    yum:
+     name: git
+     state: present
+  - name: install wget
+    yum: 
+     name: wget
+     state: present
+  -name: install tree
+    yum: 
+     name: tree
+     state: present
