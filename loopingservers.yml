@@ -11,8 +11,7 @@
     service:
       name: {{ "webserveronubuntu" }}
       service: started
-  when: ansible_os_family== "Debian"
-
+    when: ansible_os_family== "Debian"
   - name: installing httpd on Redhat
     yum:
       name: {{" webserveronAmazon"}}
