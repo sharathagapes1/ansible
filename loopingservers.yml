@@ -4,8 +4,8 @@
   tasks: 
   - name: installing on ubuntu
     apt:
-     name: "{{webserveronubuntu}}"
-     state: present
+      name: "{{webserveronubuntu}}"
+      state: present
     when: ansible_os_family== "Debian"
   - name: starting apache on ubuntu
     service:
