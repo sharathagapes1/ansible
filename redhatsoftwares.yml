@@ -8,9 +8,9 @@
      state: present
   - name: install wget
     yum: 
-     name: wget
+     name: install wget
      state: present
-  -name: install tree
-    yum: 
-     name: tree
+  - name: install tree
+    yum:
+     name: install tree
      state: present
