@@ -1,4 +1,4 @@
 key: value
 
 webserveronubuntu: apache2
-webserveronAmazon: httpd
+webserveronamazon: httpd
