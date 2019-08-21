@@ -29,6 +29,6 @@
 
 - name: deploying mahaloginapp into tomcat7
   get_url:
-    url: https://sharathagapes.s3-us-west-2.amazonaws.com/mahaLogin-2.0.warS
+    url: https://sharathagapes.s3-us-west-2.amazonaws.com/mahaLogin-2.0.war
     dest: /var/lib/tomcat7/webapps
     force_basic_auth: yes
