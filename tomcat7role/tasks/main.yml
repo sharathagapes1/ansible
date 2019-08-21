@@ -26,3 +26,9 @@
    dest: /etc/tomcat7/tomcat-users.xml
 
   notify: restarttomcat7  
+
+- name: deploying mahaloginapp into tomcat7
+  get_url:
+    url: https://sharathagapes.s3-us-west-2.amazonaws.com/mahaLogin-1.0.war
+    dest: /var/lib/tomcat7/webapps
+    force_basic_auth: yes
