@@ -1,0 +1,4 @@
+---
+- hosts: all
+  roles: 
+  - {role: tomcat7role, when: ansible_os_family== "Debian"} 

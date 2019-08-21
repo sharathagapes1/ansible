@@ -1,2 +1,28 @@
 ---
 # tasks file for tomcat7role
+- name: installing tomcat7
+  apt: 
+   name: tomcat7
+   state: present
+      
+- name: copy tom config file into nodes
+  template:
+   src: templates/tomconfig.j2
+   dest: /etc/default/tomcat7
+  notify: restart tomcat7 
+
+- name:  installing packages into tomcat7
+  apt: 
+   name: "{{ item }}"
+   state: present
+  loop:
+    - tomcat7-docs 
+    - tomcat7-admin 
+    - tomcat7-examples
+ 
+- name: copying user.xml file into tomcat7
+  template:
+   src: templates/tomuser.j2
+   dest: /etc/tomcat7/tomcat-users.xml
+
+  notify: restart tomcat7  
