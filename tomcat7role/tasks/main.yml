@@ -7,9 +7,9 @@
       
 - name: copy tom config file into nodes
   template:
-   src: templates/tomconfig.j2
-   dest: /etc/default/tomcat7
-  notify: restart tomcat7 
+    src: templates/tomconfig.j2
+    dest: /etc/default/tomcat7
+  notify: restarttomcat7 
 
 - name:  installing packages into tomcat7
   apt: 
@@ -25,4 +25,4 @@
    src: templates/tomuser.j2
    dest: /etc/tomcat7/tomcat-users.xml
 
-  notify: restart tomcat7  
+  notify: restarttomcat7  
